@@ -46,12 +46,10 @@ public class DatabaseHelper {
         Logger mongoLogging = Logger.getLogger("org.mongodb.driver");
         mongoLogging.setLevel(Level.SEVERE);
 
-        mongoClient = MongoClients.create("mongodb+srv://infaz:shenazinfaz98@iit-ogohu.mongodb.net/test?retryWrites=true&w=majority");
+        mongoClient = MongoClients.create({"Insert the Mongo DB Driver"});
         database = mongoClient.getDatabase("IIT");
 
         setDatabase(database);
-    }
-
 
     /**
      * disconnect from the Mongo Atlas Database
