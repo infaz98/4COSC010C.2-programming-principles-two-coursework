@@ -1,0 +1,112 @@
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<!--Train Queue Page is Divided into Common Section , Train Queue Section and Waiting Room Section -->
+
+<AnchorPane prefHeight="930" prefWidth="1088" style="-fx-background-color: #4e4d4f; -fx-background-radius: 22;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.TrainStationController">
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <ImageView fitHeight="225" fitWidth="1088" layoutY="33">
+        <Image url="@Availability.jpg"/>
+    </ImageView>
+
+    <Circle fx:id="closeButton" fill="#ff451f" layoutX="21" layoutY="19" onMouseClicked="#closeWindow" radius="8" stroke="BLACK" strokeType="INSIDE">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Circle>
+
+    <Circle fill="#f0d87d" layoutX="43" layoutY="19" radius="8" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fill="#37dd3a" layoutX="64" layoutY="19" radius="8" stroke="BLACK" strokeType="INSIDE" />
+
+    <Separator layoutX="304" layoutY="309" orientation="VERTICAL" prefHeight="467" />
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Train Queue section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="82" layoutY="271" prefHeight="38" prefWidth="147" text="Train Queue " textFill="white">
+        <font><Font size="16" /></font>
+    </Label>
+
+    <Label fx:id="trainQueue1" contentDisplay="CENTER" layoutX="70" layoutY="415" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="trainQueue2" contentDisplay="CENTER" layoutX="70" layoutY="456" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="trainQueue3" contentDisplay="CENTER" layoutX="70" layoutY="497" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="trainQueue4" contentDisplay="CENTER" layoutX="70" layoutY="538" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="trainQueue5" contentDisplay="CENTER" layoutX="70" layoutY="582" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="trainQueue6" contentDisplay="CENTER" layoutX="70" layoutY="625" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+
+    <Label fx:id="labelDetail" alignment="CENTER" contentDisplay="CENTER" layoutX="794" layoutY="884" prefHeight="32" prefWidth="327" style="-fx-background-color: #4e4d4f;" textFill="white">
+        <font><Font size="15" /></font>
+    </Label>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Train Queue section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Waiting Room section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <Label fx:id="waitingRoomLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="638" layoutY="271" prefHeight="38" prefWidth="147" text="Waiting Room" textAlignment="JUSTIFY" textFill="white">
+        <font><Font size="16" /></font>
+    </Label>
+
+    <Button fx:id="buttonSubmit" layoutX="865" layoutY="829" onAction="#loadPassengerDetailsFromDB" prefHeight="25" prefWidth="185" style="-fx-background-color: #6e6185;" text="Load Passengers" textFill="white" />
+
+    <DatePicker fx:id="datePicker" layoutX="865" layoutY="801" prefHeight="25" prefWidth="185" />
+
+    <Label fx:id="randomLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="117" layoutY="802" prefHeight="49" prefWidth="386" style="-fx-background-color: #4e4d4f;" textFill="white">
+        <font><Font size="15" /></font>
+    </Label>
+
+
+    <Label fx:id="label1"  contentDisplay="CENTER" layoutX="358" layoutY="340" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label2"  contentDisplay="CENTER" layoutX="358" layoutY="381" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label3"  contentDisplay="CENTER" layoutX="358" layoutY="422" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label4"  contentDisplay="CENTER" layoutX="358" layoutY="463" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label5"  contentDisplay="CENTER" layoutX="358" layoutY="507" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label6"  contentDisplay="CENTER" layoutX="358" layoutY="550" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label7"  contentDisplay="CENTER" layoutX="358" layoutY="591" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label8"  contentDisplay="CENTER" layoutX="358" layoutY="634" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label9"  contentDisplay="CENTER" layoutX="358" layoutY="676" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label10" contentDisplay="CENTER" layoutX="358" layoutY="720" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label11" contentDisplay="CENTER" layoutX="542" layoutY="340" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label12" contentDisplay="CENTER" layoutX="542" layoutY="381" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label13" contentDisplay="CENTER" layoutX="542" layoutY="422" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label14" contentDisplay="CENTER" layoutX="542" layoutY="463" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label15" contentDisplay="CENTER" layoutX="542" layoutY="507" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label16" contentDisplay="CENTER" layoutX="542" layoutY="550" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label17" contentDisplay="CENTER" layoutX="542" layoutY="591" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label18" contentDisplay="CENTER" layoutX="542" layoutY="634" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label19" contentDisplay="CENTER" layoutX="541" layoutY="676" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label20" contentDisplay="CENTER" layoutX="542" layoutY="720" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label21" contentDisplay="CENTER" layoutX="725" layoutY="340" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label22" contentDisplay="CENTER" layoutX="725" layoutY="381" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label23" contentDisplay="CENTER" layoutX="725" layoutY="422" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label24" contentDisplay="CENTER" layoutX="725" layoutY="463" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label25" contentDisplay="CENTER" layoutX="725" layoutY="507" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label26" contentDisplay="CENTER" layoutX="725" layoutY="550" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label27" contentDisplay="CENTER" layoutX="725" layoutY="591" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label28" contentDisplay="CENTER" layoutX="725" layoutY="634" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label29" contentDisplay="CENTER" layoutX="725" layoutY="676" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label30" contentDisplay="CENTER" layoutX="725" layoutY="720" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label31" contentDisplay="CENTER" layoutX="907" layoutY="340" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label32" contentDisplay="CENTER" layoutX="907" layoutY="381" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label33" contentDisplay="CENTER" layoutX="907" layoutY="422" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label34" contentDisplay="CENTER" layoutX="907" layoutY="463" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label35" contentDisplay="CENTER" layoutX="907" layoutY="507" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label36" contentDisplay="CENTER" layoutX="907" layoutY="550" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label37" contentDisplay="CENTER" layoutX="907" layoutY="591" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label38" contentDisplay="CENTER" layoutX="907" layoutY="634" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label39" contentDisplay="CENTER" layoutX="907" layoutY="676" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+    <Label fx:id="label40" contentDisplay="CENTER" layoutX="907" layoutY="720" onMouseClicked="#addPassengerToTrainQueue" prefHeight="25" prefWidth="170" style="-fx-background-color: #4e4d4f;" textFill="white" />
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Waiting Room section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+</AnchorPane>

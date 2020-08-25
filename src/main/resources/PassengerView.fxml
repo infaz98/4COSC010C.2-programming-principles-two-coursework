@@ -1,0 +1,278 @@
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<!--Train Queue Page is Divided into Common Section , Seat View Section and Passenger Info Section -->
+
+<AnchorPane prefHeight="902" prefWidth="1188" style="-fx-background-color: #4e4d4f; -fx-background-radius: 22;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.TrainStationController">
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <ImageView fitHeight="215" fitWidth="942" layoutY="39">
+        <Image url="@Availability.jpg"/>
+    </ImageView>
+
+
+    <Circle fx:id="closeButton" fill="#ff451f" layoutX="21" layoutY="19" onMouseClicked="#closeWindow" radius="8" stroke="BLACK" strokeType="INSIDE">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Circle>
+
+    <Circle fill="#f0d87d" layoutX="43" layoutY="19" radius="8" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fill="#37dd3a" layoutX="64" layoutY="19" radius="8" stroke="BLACK" strokeType="INSIDE" />
+
+    <Separator layoutX="866" layoutY="330" orientation="VERTICAL" prefHeight="449" />
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Seat View Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <Label fx:id="boardlbl" layoutX="598" layoutY="465" prefHeight="30" prefWidth="31" style="-fx-background-color: #83f78d; -fx-background-radius: 8;" />
+    <Label fx:id="queuelbl" layoutX="598" layoutY="521" prefHeight="30" prefWidth="31" style="-fx-background-color: #f7fa98; -fx-background-radius: 8;" />
+    <Label fx:id="waitinglbl" layoutX="598" layoutY="578" prefHeight="30" prefWidth="31" style="-fx-background-color: #ffb296; -fx-background-radius: 8;" />
+
+    <Label layoutX="649" layoutY="465" prefHeight="30" prefWidth="209" text="Passengers Board at Train" textFill="WHITE" />
+    <Label layoutX="649" layoutY="521" prefHeight="30" prefWidth="209" text="Passengers at Train Queue" textFill="WHITE" />
+    <Label layoutX="649" layoutY="578" prefHeight="30" prefWidth="209" text="Passengers at Waiting Room" textFill="WHITE" />
+
+
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173" layoutY="368" prefHeight="26" prefWidth="236" text="Seat View" textFill="WHITE">
+        <font><Font size="14" /></font>
+    </Label>
+
+    <Label fx:id="label1" alignment="CENTER" layoutX="21" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="1">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label2" alignment="CENTER" layoutX="21" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="2">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label3" alignment="CENTER" layoutX="68" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="3">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label4" alignment="CENTER" layoutX="68" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="4">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label5" alignment="CENTER" layoutX="117" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="5">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label6" alignment="CENTER" layoutX="117" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="6">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label7" alignment="CENTER" layoutX="165" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="7">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label8" alignment="CENTER" layoutX="165" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="8">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label9" alignment="CENTER" layoutX="220" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="9">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label10" alignment="CENTER" layoutX="220" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="10">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label11" alignment="CENTER" layoutX="276" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="11">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label12" alignment="CENTER" layoutX="276" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="12">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label13" alignment="CENTER" layoutX="326" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="13">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label14" alignment="CENTER" layoutX="326" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="14">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label15" alignment="CENTER" layoutX="374" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="15">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label16" alignment="CENTER" layoutX="374" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="16">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label17" alignment="CENTER" layoutX="427" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="17">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label18" alignment="CENTER" layoutX="427" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="18">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label19" alignment="CENTER" layoutX="473" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="19">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label20" alignment="CENTER" layoutX="473" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="20">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label21" alignment="CENTER" layoutX="523" layoutY="427" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="21">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label22" alignment="CENTER" layoutX="523" layoutY="484" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="22">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label23" alignment="CENTER" layoutX="68" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="23">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label24" alignment="CENTER" layoutX="68" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="24">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label25" alignment="CENTER" layoutX="117" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="25">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label26" alignment="CENTER" layoutX="117" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="26">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label27" alignment="CENTER" layoutX="165" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="27">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label28" alignment="CENTER" layoutX="165" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="28">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label29" alignment="CENTER" layoutX="220" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="29">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label30" alignment="CENTER" layoutX="220" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="30">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label31" alignment="CENTER" layoutX="276" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="31">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label32" alignment="CENTER" layoutX="276" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="32">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label33" alignment="CENTER" layoutX="326" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="33">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label34" alignment="CENTER" layoutX="326" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="34">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label35" alignment="CENTER" layoutX="374" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="35">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label36" alignment="CENTER" layoutX="374" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="36">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label37" alignment="CENTER" layoutX="427" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="37">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label38" alignment="CENTER" layoutX="427" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="38">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label39" alignment="CENTER" layoutX="473" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="39">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label40" alignment="CENTER" layoutX="473" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="40">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label41" alignment="CENTER" layoutX="523" layoutY="554" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="41">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <Label fx:id="label42" alignment="CENTER" layoutX="523" layoutY="611" onMouseClicked="#getData" prefHeight="41" prefWidth="36" style="-fx-background-color: #d3e5f5; -fx-background-radius: 7;" text="42">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+
+    <Label layoutX="194" layoutY="680" prefHeight="17" prefWidth="236" text="Click on the Seat to see more details" textFill="WHITE" />
+
+    <Label fx:id="labelTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="888" layoutY="335" prefHeight="26" prefWidth="219" text="Passengers at Train Queue" textFill="WHITE">
+        <font><Font size="14" /></font>
+    </Label>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Seat View Section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Passenger Info Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <Label fx:id="trainQueueAnim" layoutX="961" layoutY="328" prefHeight="65" style="-fx-font-weight: bold;" text="_" textFill="WHITE">
+        <font><Font size="44" /></font>
+    </Label>
+
+    <Label fx:id="waitingRoomAnim" layoutX="976" layoutY="328" prefHeight="65" prefWidth="6" style="-fx-font-weight: bold;" text="_" textFill="WHITE">
+        <font><Font size="44" /></font>
+    </Label>
+
+    <Label fx:id="navigator" alignment="CENTER" contentDisplay="CENTER" layoutX="1143" layoutY="328" onMouseClicked="#changeNavigator" prefHeight="26" prefWidth="31" style="-fx-font-weight: bold;" text="&gt;" textFill="WHITE">
+        <font><Font size="28" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+
+    <ScrollPane layoutX="877" layoutY="393" prefHeight="382" prefWidth="266" style="-fx-background-color: #4e4d4f;">
+
+        <AnchorPane prefHeight="712" prefWidth="251" style="-fx-background-color: #4e4d4f;">
+
+            <Label fx:id="labelView1"  layoutX="18" layoutY="53"  prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView2"  layoutX="18" layoutY="88"  prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView3"  layoutX="16" layoutY="126" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView4"  layoutX="16" layoutY="161" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView5"  layoutX="16" layoutY="197" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView6"  layoutX="16" layoutY="232" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView7"  layoutX="16" layoutY="265" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView8"  layoutX="16" layoutY="300" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView9"  layoutX="16" layoutY="335" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView10" layoutX="16" layoutY="370" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView11" layoutX="16" layoutY="405" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView12" layoutX="16" layoutY="440" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView13" layoutX="16" layoutY="475" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView14" layoutX="16" layoutY="510" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView15" layoutX="16" layoutY="545" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView16" layoutX="16" layoutY="580" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView17" layoutX="16" layoutY="615" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView18" layoutX="16" layoutY="650" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView19" layoutX="16" layoutY="685" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+            <Label fx:id="labelView20" layoutX="16" layoutY="720" prefHeight="26" prefWidth="219" style="-fx-background-color: #4e4d4f;" textFill="WHITE" />
+
+        </AnchorPane>
+
+    </ScrollPane>
+
+    <Label fx:id="labelDetail" alignment="CENTER" contentDisplay="CENTER" layoutX="131" layoutY="763" prefHeight="32" prefWidth="327" style="-fx-background-color: #4e4d4f;" textFill="white">
+      <font>
+         <Font size="15" />
+      </font>
+   </Label>
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Passenger Info Section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+</AnchorPane>

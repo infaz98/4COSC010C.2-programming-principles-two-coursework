@@ -1,0 +1,142 @@
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<!--Train Queue Page is Divided into Common Section , Individual Section and Summery Section -->
+
+
+<?import javafx.scene.control.ScrollPane?>
+<AnchorPane prefHeight="849" prefWidth="939" style="-fx-background-color: #4e4d4f; -fx-background-radius: 22;" xmlns:fx="http://javafx.com/fxml/1"   fx:controller="com.controller.TrainStationController">
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <ImageView fitHeight="192" fitWidth="939" layoutY="35">
+        <Image url="@Availability.jpg"/>
+    </ImageView>
+
+    <Separator layoutX="487" layoutY="273" orientation="VERTICAL" prefHeight="487" />
+
+    <Circle fx:id="closeButton" fill="#ff451f" layoutX="21" layoutY="19" onMouseClicked="#closeWindow" radius="8" stroke="BLACK" strokeType="INSIDE">
+        <cursor><Cursor fx:constant="HAND"/></cursor>
+    </Circle>
+
+    <Circle fill="#f0d87d" layoutX="43" layoutY="19" radius="8" stroke="BLACK" strokeType="INSIDE"/>
+    <Circle fill="#37dd3a" layoutX="64" layoutY="19" radius="8" stroke="BLACK" strokeType="INSIDE"/>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Common section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Individual Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <Label layoutX="183" layoutY="235" prefHeight="35" prefWidth="185" style="-fx-background-color: #4e4d4f;"
+           text="Individual Statistic" textFill="white">
+        <font><Font size="14"/></font>
+    </Label>
+
+    <Label layoutX="91" layoutY="337" prefHeight="17" prefWidth="146" style="-fx-background-color: #4e4d4f;"
+           text="Passenger Name" textFill="white"/>
+    <Label layoutX="303" layoutY="337" prefHeight="17" prefWidth="146" style="-fx-background-color: #4e4d4f;"
+           text="Processing Time" textFill="white"/>
+
+    <ScrollPane layoutX="60" layoutY="384" prefHeight="412" prefWidth="361">
+
+        <AnchorPane prefHeight="664" prefWidth="345" style="-fx-background-color: #4e4d4f;">
+
+            <Label fx:id="label1"  layoutX="34" layoutY="16"  prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label2"  layoutX="34" layoutY="47"  prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label3"  layoutX="34" layoutY="80"  prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label4"  layoutX="34" layoutY="112" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label5"  layoutX="34" layoutY="146" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label6"  layoutX="34" layoutY="180" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label7"  layoutX="34" layoutY="210" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label8"  layoutX="34" layoutY="241" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label9"  layoutX="34" layoutY="274" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label10" layoutX="34" layoutY="306" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label11" layoutX="34" layoutY="340" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label12" layoutX="34" layoutY="374" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label13" layoutX="34" layoutY="402" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label14" layoutX="34" layoutY="432" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label15" layoutX="34" layoutY="463" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label16" layoutX="34" layoutY="496" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label17" layoutX="34" layoutY="528" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label18" layoutX="34" layoutY="562" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label19" layoutX="34" layoutY="596" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label20" layoutX="34" layoutY="626" prefHeight="17" prefWidth="185" style="-fx-background-color: #4e4d4f;" textFill="white" />
+
+
+            <Label fx:id="label21" layoutX="247" layoutY="16"  prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label22" layoutX="247" layoutY="47"  prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label23" layoutX="247" layoutY="80"  prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label24" layoutX="247" layoutY="112" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label25" layoutX="247" layoutY="146" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label26" layoutX="247" layoutY="180" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label27" layoutX="247" layoutY="210" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label28" layoutX="247" layoutY="241" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label29" layoutX="247" layoutY="274" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label30" layoutX="247" layoutY="306" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label31" layoutX="247" layoutY="340" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label32" layoutX="247" layoutY="374" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label33" layoutX="247" layoutY="402" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label34" layoutX="247" layoutY="432" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label35" layoutX="247" layoutY="463" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label36" layoutX="247" layoutY="496" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label37" layoutX="247" layoutY="528" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label38" layoutX="247" layoutY="562" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label39" layoutX="247" layoutY="596" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+            <Label fx:id="label40" layoutX="247" layoutY="624" prefHeight="17" prefWidth="48" style="-fx-background-color: #4e4d4f;" textFill="white" />
+
+        </AnchorPane>
+
+    </ScrollPane>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Individual Section End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Summery Section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <Label layoutX="545" layoutY="384" prefHeight="25" prefWidth="167" style="-fx-background-color: #4e4d4f;"
+           text="Number of Passengers  :" textFill="white"/>
+
+    <Label fx:id="numberOfPassenger" layoutX="712" layoutY="384" prefHeight="25" prefWidth="167"
+           style="-fx-background-color: #4e4d4f;" text="Number of Passengers Value" textFill="white"/>
+
+    <Label layoutX="545" layoutY="425" prefHeight="25" prefWidth="167" style="-fx-background-color: #4e4d4f;"
+           text="Average Time in Queue :" textFill="white"/>
+
+    <Label fx:id="averageTimeInQueue" layoutX="712" layoutY="425" prefHeight="25" prefWidth="167"
+           style="-fx-background-color: #4e4d4f;" text="Average TIme in Queue Value" textFill="white"/>
+
+    <Label layoutX="545" layoutY="471" prefHeight="25" prefWidth="167" style="-fx-background-color: #4e4d4f;"
+           text="Maximum Waiting Time :" textFill="white"/>
+
+    <Label fx:id="maximumTimeInQueue" layoutX="712" layoutY="471" prefHeight="25" prefWidth="167"
+           style="-fx-background-color: #4e4d4f;" text="Maximum Waiting Time Value" textFill="white"/>
+
+    <Label layoutX="545" layoutY="516" prefHeight="25" prefWidth="167" style="-fx-background-color: #4e4d4f;"
+           text="Minimum Waiting Time :" textFill="white"/>
+
+    <Label fx:id="minimumTImeInQueue" layoutX="712" layoutY="516" prefHeight="25" prefWidth="167"
+           style="-fx-background-color: #4e4d4f;" text="Minimum Waiting Time Value" textFill="white"/>
+
+    <Label layoutX="620" layoutY="235" prefHeight="35" prefWidth="185" style="-fx-background-color: #4e4d4f;"
+           text="Summary of the Train Queue" textFill="white">
+        <font><Font size="14"/></font>
+    </Label>
+
+    <Button fx:id="generateTrainQueueFileButton" layoutX="729" layoutY="768"
+            onAction="#creatingTrainQueueFile" prefHeight="25" prefWidth="153" style="-fx-background-color: #6e6185;"
+            text="Generate a File" textFill="white"/>
+
+    <TextField fx:id="fileName" layoutX="731" layoutY="720"/>
+
+    <Label layoutX="509" layoutY="720" prefHeight="25" prefWidth="203" style="-fx-background-color: #4e4d4f;"
+           text="Enter the File Name Wish to Save :" textFill="white"/>
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Summery Section End ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+</AnchorPane>
