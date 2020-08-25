@@ -5,7 +5,7 @@ Functionalities of the System
 <li>Booking a Seat for the passenger in the given Date.</li>
 <li>Remove a  Booked Seat according to the Seat Number. </li>
 <li>Search Passenger information (Passenger Name, Seat number, Booking date).</li>
-<li>Storing All the Booking information in real time in NoSql Database (MongoDb Atlas).</li>   
+<li>Storing All the Booking information in real time in a NoSql Database (MongoDB Atlas).</li>   
 <li>Transferring passengers to train from the waiting room.</li>  
 </ul>
 
