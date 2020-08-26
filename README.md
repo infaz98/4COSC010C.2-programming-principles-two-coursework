@@ -1,6 +1,6 @@
 #### ticketing system -cw2
 
-Functionalities of the System
+Functionalities of the application
 <ul>
 <li>Booking a Seat for the passenger in the given Date.</li>
 <li>Remove a  Booked Seat according to the Seat Number. </li>
